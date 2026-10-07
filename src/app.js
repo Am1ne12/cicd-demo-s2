@@ -1,6 +1,6 @@
 const express = require("express");
 const { calculerTTC } = require("./services/calculator");
-const variableInutile = 10;
+
 const app = express();
 app.use(express.json());
 
