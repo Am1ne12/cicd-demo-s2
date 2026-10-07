@@ -43,3 +43,7 @@ jobs:
           done
           docker logs cicd-demo
           exit 1
+          
+      - name: Tester l'API
+        run: |
+          curl --fail "http://localhost:3000/api/calcul/ttc?prix=100&tva=20" | grep '"prixTTC":120'
